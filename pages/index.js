@@ -12,11 +12,11 @@ export default function Home({ data, content }) {
         <Header page={0}/>
         {data.length !== 0 ? <div><h1>Kategorijas</h1><CardStack data={data}/></div> : ""}
 
-        <AboutUs title={content.aboutus.title} description={content.aboutus.description} photo={content.aboutus.photo.url}/>
+        <AboutUs title={content?.aboutus?.title} description={content?.aboutus?.description} photo={content?.aboutus?.photo.url}/>
         <ContactRow
-            phone={content.phone}
-            email={content.email}
-            address={content.address}
+            phone={content?.phone}
+            email={content?.email}
+            address={content?.address}
         />
         <Footer/>
     </div>
