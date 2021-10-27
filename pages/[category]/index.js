@@ -84,8 +84,8 @@ export async function getStaticProps({ params }) {
             })
         });
     const subcategories = await subcategoriesRes.json();
-    const data = subcategories.data.categories[0].subcategories;
-    const title = subcategories.data.categories[0].title;
+    const data = subcategories?.data?.categories[0].subcategories;
+    const title = subcategories?.data?.categories[0].title;
     return {
         props: {
             data,

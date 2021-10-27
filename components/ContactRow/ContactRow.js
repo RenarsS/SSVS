@@ -8,14 +8,14 @@ export default function ContactRow(props) {
                     <h1>Kontakti</h1>
                 </div>
                 <div className="content">
-                    <p>{`${props.phone.title}`}<a href={`tel:${props.phone.data}`}>{props.phone.data}</a></p>
-                    <p>{`${props.email.title}`}<a href={`mailto:${props.email.data}`}>{props.email.data}</a></p>
+                    <p>{`${props?.phone?.title}`}<a href={`tel:${props?.phone?.data}`}>{props?.phone?.data}</a></p>
+                    <p>{`${props?.email?.title}`}<a href={`mailto:${props?.email?.data}`}>{props?.email?.data}</a></p>
                 </div>
             </div>
             <div className="address">
-                <h1>{props.address.title}</h1>
+                <h1>{props?.address?.title}</h1>
                 <div className="content">
-                    <h2>{props.address.data}</h2>
+                    <h2>{props?.address?.data}</h2>
                 </div>
             </div>
             <div className="pin">

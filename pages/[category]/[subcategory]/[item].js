@@ -79,7 +79,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const productRes = await fetch("http://localhost:1337/graphql", {
+    const productRes = await fetch("http://localhsot:1337/graphql", {
         method: 'POST',
         headers:{
             "Content-Type":"application/json"
