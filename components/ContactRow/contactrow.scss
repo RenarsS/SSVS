@@ -1,0 +1,146 @@
+
+iframe{
+  height: 100%;
+  width:100%;
+}
+.mapouter{;text-align:right;height:100%;width:100%;}
+
+.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}
+
+
+.contactrow{
+
+  a{
+    color: $secondary-tres;
+  }
+
+
+  h1{
+    color:$base;
+  }
+  h2{
+    color:$base;
+  }
+
+  p{
+    color:$base;
+    font-family: $font-dos;
+  }
+
+  .content{
+    @include flexContainer(column, center, center);
+  }
+
+  .contacts{
+    text-align: left;
+    background-color: $primary-uno;
+  }
+
+  .address{
+    @include flexContainer(column, center, center);
+    background-color: $primary-dos;
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+
+  .contactrow{
+    height: 23rem;
+    @include flexContainer(row, center, center);
+    h1{
+      font-size: 3.5rem;
+    }
+    h2{
+      font-size: 2.25rem;
+    }
+
+    p{
+      font-size: 1.5rem;
+    }
+
+    .contacts{
+      padding:0 3rem;
+      width: 33%;
+      height:100%;
+    }
+
+    .address{
+      width: 33%;
+      height:100%;
+    }
+    .pin{
+      width: 34%;
+      height:100%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contactrow{
+    height:auto;
+    position:relative;
+    @include flexContainer(column, center, space-evenly);
+    h1{
+      font-size: 3.1rem;
+      margin:1rem;
+    }
+    h2{
+      font-size: 2.1rem;
+      margin:1rem;
+    }
+
+    p{
+      font-size: 1.5rem;
+      padding:0 2rem;
+    }
+
+    .contacts{
+      text-align: left;
+      width: 100%;
+      height:23rem;
+    }
+
+    .address{
+
+      width: 100%;
+      height:23rem;
+    }
+    .pin{
+      height:23rem;
+      width:100%;
+    }
+  }
+}
+
+@media screen and (min-width: 800px){
+  .contactrow{
+    height: 23rem;
+    @include flexContainer(row, center, center);
+    h1{
+      font-size: 2.5rem;
+    }
+    h2{
+      font-size: 2rem;
+    }
+
+    p{
+      font-size: 1.5rem;
+    }
+
+    .contacts{
+      padding:0 3rem;
+      width: 33%;
+      height:100%;
+    }
+
+    .address{
+      width: 33%;
+      height:100%;
+    }
+    .pin{
+      width: 34%;
+      height:100%;
+    }
+  }
+}

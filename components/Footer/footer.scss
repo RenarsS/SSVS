@@ -1,0 +1,9 @@
+.footer{
+  @include flexContainer(row, center, center);
+  position:relative;
+  h2{
+    color: $base;
+    font-family: $font-uno;
+  }
+}
+

@@ -1,0 +1,101 @@
+.aboutus{
+  background-color: $primary-tres;
+  color: $base;
+
+  .photo{
+    background: $primary-tres;
+    opacity: 0.5;
+  }
+
+  h1{
+    color: $base;
+  }
+  p{
+    font-family: $font-dos;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  img{
+
+    z-index: -1;
+    position: relative;
+  }
+
+  .text{
+    width: 100%;
+    height:100%;
+    text-align: left;
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+  .aboutus{
+
+    height:32rem;
+    @include flexContainer(row, center, center);
+
+    h1{
+      font-size: 5rem;
+    }
+
+    .text{
+      padding:2rem 4rem ;
+    }
+    .photo{
+      height:inherit;
+    }
+
+    img{
+      height:100%;
+    }
+
+  }
+}
+
+@media screen and (min-width: 800px){
+  .aboutus{
+    @include flexContainer(row, center, center);
+    height:24rem;
+
+    h1{
+      font-size:2.85rem;
+    }
+    .photo{
+      height:inherit;
+    }
+    .text{
+      padding:1rem 1.5rem;
+    }
+
+    img{
+      height:100%;
+    }
+
+  }
+
+}
+@media screen and (max-width: 800px) {
+  .aboutus{
+    position:relative;
+    @include flexContainer(column, center, center);
+    height:100%;
+
+    p{
+      font-size:1.25rem;
+      padding: 1rem 3rem;
+    }
+    h1{
+      padding: 0 3rem;
+    }
+    img{
+      width:100%;
+
+    }
+
+    .photo{
+      width:inherit;
+    }
+
+  }
+}

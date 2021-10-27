@@ -1,0 +1,49 @@
+.header{
+  h1{
+    color:$base;
+  }
+
+}
+
+@media screen and (min-width:560px){
+  .header{
+
+    @include flexContainer(row, flex-start, center);
+
+    padding-left: 5%;
+    height: 15rem;
+    img{
+      width:12rem;
+      height:12rem;
+      margin: 2rem;
+    }
+
+    h1{
+      font-size: 7rem;
+    }
+  }
+}
+
+h1{
+  font-family: $font-uno;
+}
+
+@media screen and (max-width: 560px){
+
+  .header{
+    @include flexContainer(column, flex-start, center);
+
+
+    height: 100%;
+    img{
+      width:20rem;
+      height:20rem;
+      margin: 1rem;
+    }
+
+    h1{
+      font-size: 7rem;
+    }
+  }
+}
+

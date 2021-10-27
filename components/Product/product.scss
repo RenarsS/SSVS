@@ -1,0 +1,39 @@
+.product {
+  @include flexContainer(column, center, center);
+
+  width: 18rem;
+  height: 19rem;
+  margin:2rem auto;
+
+  .info{
+    width:100%;
+    @include flexContainer(row, space-around, center );
+  }
+  .title{
+    width:50%;
+    text-align: left;
+  }
+
+  &:hover {
+    width:19rem;
+    height: 20rem;
+    margin:1rem auto;
+  }
+
+  .image{
+    //margin:0.25rem;
+    @include flexContainer(row, center, center);
+    background-color: $base;
+    width:18rem;
+    height:16rem;
+    overflow: hidden;
+
+    &:hover {
+      width:19rem;
+    }
+  }
+
+  img{
+    height: inherit;
+  }
+}
