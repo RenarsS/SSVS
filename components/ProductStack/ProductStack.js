@@ -12,7 +12,7 @@ export default function ProductStack(props) {
                             <a href={`/${data?.subcategory?.category?.slug}/${data?.subcategory?.slug}/${data?.slug}`} >
                                 <Product
                                     title={data?.title}
-                                    photo={`http://206.189.59.47:1337${data?.photos[0]?.url}`}
+                                    photo={`http://localhost:1337${data?.photos[0]?.url}`}
                                     slug={data?.slug}
                                     price={data?.price}
                                 />

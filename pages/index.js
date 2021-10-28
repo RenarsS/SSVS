@@ -24,28 +24,28 @@ export default function Home({ data, content }) {
 }
 
 export async function getStaticProps(){
-    const categoriesRes = await fetch(`http://localhost:1337/graphql`,
-        {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                query: `{
+    const requestBody = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            query: `{
                 categories{
-                id
-                title
-                slug
-                photo{
-                url
-                }
-                }
+                    id
+                    title
+                    slug
+                    photo{
+                        url
+                        }
+                    }
                 }`
-            })
-        });
+        })
+    };
+    const categoriesRes = await fetch(`http://localhost:1337/graphql`, requestBody);
     const categories = await categoriesRes.json();
     const data = categories.data.categories;
-    console.log()
+
     const frontRes = await fetch(`http://localhost:1337/graphql`,
         {
             method: 'POST',

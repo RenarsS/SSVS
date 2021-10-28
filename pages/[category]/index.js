@@ -44,9 +44,9 @@ export async function getStaticPaths(){
         });
 
     const categories = await categoriesRes.json();
-    const paths = categories.data.categories.map(category => ({
+    const paths = categories?.data?.categories?.map(category => ({
         params: {
-            category: String(category.slug)
+            category: String(category?.slug)
         }
     }));
     return {
@@ -66,7 +66,7 @@ export async function getStaticProps({ params }) {
             },
             body: JSON.stringify({
                 query: `{
-                categories(where: {slug: "${params.category}"}){
+                categories(where: {slug: "${params?.category}"}){
                     title
                     subcategories{
                         category{
@@ -84,8 +84,8 @@ export async function getStaticProps({ params }) {
             })
         });
     const subcategories = await subcategoriesRes.json();
-    const data = subcategories?.data?.categories[0].subcategories;
-    const title = subcategories?.data?.categories[0].title;
+    const data = subcategories?.data?.categories[0]?.subcategories;
+    const title = subcategories?.data?.categories[0]?.title;
     return {
         props: {
             data,

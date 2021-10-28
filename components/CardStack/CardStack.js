@@ -12,7 +12,7 @@ export default function CardStack(props) {
                             <a href={data.category?.slug !== undefined ? `${data?.category?.slug}/${data?.slug}`:`${data?.slug}`} >
                                 <Card
                                     title={data?.title}
-                                    photo={`http://206.189.59.47:1337${data?.photo?.url}`}
+                                    photo={`http://localhost:1337${data?.photo?.url}`}
                                     slug={data?.slug}
                                 />
                             </a>

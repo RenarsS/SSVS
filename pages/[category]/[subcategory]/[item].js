@@ -66,8 +66,8 @@ export async function getStaticPaths() {
     const products = await productsRes.json();
     const paths = products.data.products.map(product => ({
         params: {
-            category: String(product.subcategory.category?.slug),
-            subcategory: String(product.subcategory?.slug),
+            category: String(product?.subcategory?.category?.slug),
+            subcategory: String(product?.subcategory?.slug),
             item: String(product?.slug)
         }
     }))
@@ -103,7 +103,7 @@ export async function getStaticProps({ params }) {
         }),
     });
     const product = await productRes.json();
-    const data = product.data.products[0];
+    const data = product?.data?.products[0];
     return{
         props: {
             data

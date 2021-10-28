@@ -47,10 +47,10 @@ export async function getStaticPaths(){
             })
         });
     const subcategories = await subcategoriesRes.json();
-    const paths = subcategories.data.subcategories.map(subcategory => ({
+    const paths = subcategories?.data?.subcategories?.map(subcategory => ({
         params: {
-            category: String(subcategory.category.slug),
-            subcategory: String(subcategory.slug)
+            category: String(subcategory?.category?.slug),
+            subcategory: String(subcategory?.slug)
         }
     }));
     return {
@@ -70,7 +70,7 @@ export async function getStaticProps ({params}) {
             },
             body: JSON.stringify({
                 query: `{
-                  subcategories (where: {slug: "${params.subcategory}"}){
+                  subcategories (where: {slug: "${params?.subcategory}"}){
                     slug
                     title
                     category{
@@ -96,8 +96,8 @@ export async function getStaticProps ({params}) {
             })
         });
     const products = await productsRes.json();
-    const data = products.data.subcategories[0].products;
-    const title = products.data.subcategories[0].title;
+    const data = products?.data?.subcategories[0]?.products;
+    const title = products?.data?.subcategories[0]?.title;
 
     return {
         props: {
