@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
       <>
         <Head>
           <title>SSVS</title>
-          <link rel="shortcut icon" href="../public/SSVS_logo_v2.svg"/>
+          <link rel="icon" href="/SSVS_logo_v2.svg"/>
         </Head>
         <Component {...pageProps} />
       </>
