@@ -10,7 +10,7 @@ export default function Home({ data, content }) {
   return(
     <div className="home">
         <Header page={0}/>
-        {data.length !== 0 ? <div><h1>Kategorijas</h1><CardStack data={data}/></div> : ""}
+        {data?.length !== 0 ? <div><h1>Kategorijas</h1><CardStack data={data}/></div> : ""}
 
         <AboutUs title={content?.aboutus?.title} description={content?.aboutus?.description} photo={content?.aboutus?.photo.url}/>
         <ContactRow

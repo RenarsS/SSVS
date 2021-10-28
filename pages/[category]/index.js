@@ -4,7 +4,7 @@ import CardStack from "../../components/CardStack/CardStack";
 
 export default function Category({ title, data }){
 
-    if(data.length !== 0){
+    if(data?.length !== 0){
         return(
             <div className="category">
                 <Header page={1}/>

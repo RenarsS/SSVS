@@ -4,7 +4,7 @@ import Footer from "../../../components/Footer/Footer";
 
 
 export default function Subcategory({ title, data }) {
-    if(data.length !== 0){
+    if(data?.length !== 0){
         return(
             <div className="subcategory">
                 <Header page={2}/>
